@@ -1,0 +1,64 @@
+.title-row {
+  margin-top: 1.25rem;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 1.15rem;
+  color: #46465d;
+}
+
+.areas-row {
+  margin-top: 1.25rem;
+}
+
+.area-salud {
+  padding: 1.25rem;
+  text-align: center;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 0.75rem;
+  cursor: pointer;
+  background: transparent;
+  transition: all 0.2s ease-in;
+  font-weight: 600;
+  color: #60618a;
+  background: white;
+
+  .area-icon {
+    height: 42px;
+    width: 42px;
+    fill: #60618a;
+    transition: all 0.2s ease-in;
+    margin-bottom: 0.85rem;
+  }
+
+  &:hover {
+    color: white;
+    background: #d41864;
+
+    .area-icon {
+      height: 42px;
+      width: 42px;
+      fill: #ffffff;
+    }
+  }
+}
+
+.info-box {
+  padding: 1.5rem 1.25rem;
+  border: 1px solid #e6ecf5;
+  color: rgba(23, 43, 77, 0.83);
+  margin-top: 1.8rem;
+  background: white;
+
+  .info {
+    color: #d41864;
+    font-weight: 600;
+    margin-bottom: 0.85rem;
+    font-size: 1.15rem;
+  }
+
+  p {
+    margin: 0;
+  }
+}

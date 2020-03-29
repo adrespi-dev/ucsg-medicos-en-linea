@@ -1,0 +1,26 @@
+.header-fix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  height: 64px;
+  background-color: #fff;
+  border-bottom: 1px solid #e6ecf5;
+}
+
+img {
+  height: 32px;
+}
+
+.logo-app {
+  margin-left: 15px;
+  font-weight: 700;
+  color: #d41864;
+  font-size: 18px;
+}

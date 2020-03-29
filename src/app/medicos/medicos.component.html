@@ -1,0 +1,22 @@
+<ucsg-header></ucsg-header>
+<div class="body-app relative">
+  <div class="loading-overlay" *ngIf="isLoading">
+    <mat-progress-bar class="loading-bar" color="primary" mode="indeterminate">
+    </mat-progress-bar>
+  </div>
+  <div class="wrapper h-100 w-100">
+    <div class="container w-100">
+      <mat-tab-group [selectedIndex]="selectedIndex">
+        <mat-tab>
+          <ucsg-areas
+            [areas]="areas"
+            (areaSelected)="onAreaSelected($event)"
+          ></ucsg-areas>
+        </mat-tab>
+        <mat-tab>
+          <ucsg-profesionales [area]="areaSelected"></ucsg-profesionales>
+        </mat-tab>
+      </mat-tab-group>
+    </div>
+  </div>
+</div>

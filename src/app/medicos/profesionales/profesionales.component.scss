@@ -1,0 +1,114 @@
+.area-icon {
+  height: 36px;
+  width: 36px;
+  margin-right: 1.25rem;
+  fill: #60618a;
+}
+
+.profesionales-title {
+  font-weight: 700;
+  font-size: 1.25rem;
+  color: #60618a;
+}
+
+.profesionales-row {
+  margin-top: 2rem;
+}
+
+.card {
+  background: white;
+  border: 1px solid #e6ecf5;
+  margin-bottom: 4.55rem;
+
+  .medico-profile {
+    padding: 1.5rem 1.25rem;
+    border-bottom: 1px solid #e6ecf5;
+  }
+
+  .medico-name {
+    font-weight: 600;
+  }
+
+  .medico-status {
+    position: absolute;
+    top: -10px;
+    background: #ff3c7e;
+    right: 5px;
+    border-radius: 15px;
+    padding: 2px 12px;
+    color: white;
+
+    &.on {
+      background: #37c936;
+    }
+  }
+
+  .medico-horario {
+    margin-top: 18px;
+    font-weight: 600;
+    color: #2d2b4d;
+  }
+
+  .medico-actions {
+    padding: 1rem 0.75rem;
+    // justify-content: center;
+  }
+}
+
+button {
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+}
+
+.btn-ws {
+  background: white;
+  border-radius: 22px;
+  padding: 0 15px;
+  border: 1px solid #d4deee;
+  transition: all 0.2s ease-in;
+  color: #515365;
+  font-weight: 500;
+  margin-right: 6px;
+  height: 30px;
+
+  &:hover {
+    background-color: #edf2f8;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+
+  img {
+    height: 28px;
+    margin-left: 5px;
+  }
+}
+
+.btn-llamar {
+  background: white;
+  border-radius: 22px;
+  padding: 0 15px;
+  border: 1px solid #d4deee;
+  transition: all 0.2s ease-in;
+  color: #515365;
+  font-weight: 500;
+  margin-right: 6px;
+  height: 30px;
+
+  &:hover {
+    background-color: #edf2f8;
+  }
+
+  &:disabled {
+    opacity: 0.4;
+  }
+}
+
+i-feather {
+  height: 18px;
+  width: 18px;
+  margin-left: 6px;
+}

@@ -1,0 +1,36 @@
+<div class="container">
+  <div class="row info-row">
+    <div class="col-12">
+      <div class="info-box">
+        <div class="info">Acerca de este servicio:</div>
+        <p>
+          Nos enfrentamos a una situación compleja, muy difícil y estamos
+          seguros de que las dudas que se te presentan son muchas.
+          <br />
+          <br />
+          Es tiempo de cuidar nuestra salud y la de todos los que nos rodean,
+          por eso te ofrecemos la posibilidad de comunicarte con un equipo de
+          profesionales en el área de la salud, ellos podrán satisfacer tus
+          dudas e inquietudes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="row title-row">
+    <div class="col-12">
+      <div class="title">Selecciona un área de salud:</div>
+    </div>
+  </div>
+  <div class="row areas-row">
+    <div class="col-md-4" *ngFor="let area of areas">
+      <div class="area-salud" (click)="areaSelected.emit(area)">
+        <svg class="area-icon">
+          <use [attr.xlink:href]="'#' + area.icon" />
+        </svg>
+        <div class="area-name">
+          {{ area.name }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

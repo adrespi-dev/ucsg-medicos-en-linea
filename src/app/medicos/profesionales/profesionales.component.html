@@ -1,0 +1,58 @@
+<ng-container *ngIf="area">
+  <div class="container">
+    <div class="row">
+      <div class="col-12">
+        <div class="d-flex" style="margin-top: 1.5rem;">
+          <svg class="area-icon">
+            <use [attr.xlink:href]="'#' + area.icon" />
+          </svg>
+          <div class="profesionales-title">
+            Profesionales de {{ area.name }}
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row profesionales-row">
+      <div class="col-12 col-md-4" *ngFor="let medico of medicos">
+        <div class="card relative">
+          <div class="medico-status" [class.on]="medico.estaAtendiendo">
+            {{ medico.estaAtendiendo ? "Atendiendo" : "No Atendiendo" }}
+          </div>
+          <div class="medico-profile">
+            <div class="medico-name">{{ medico.name }}</div>
+            <div class="medico-phone">{{ medico.celular }}</div>
+            <div class="medico-horario">Horario:</div>
+            <div
+              class="medico-horario-item"
+              *ngFor="let h of medico.horariosStr"
+            >
+              {{ h }}
+            </div>
+          </div>
+          <div class="medico-actions d-flex">
+            <button
+              [disabled]="!medico.estaAtendiendo"
+              (click)="escribirEnWS(medico.celular)"
+              class="btn-ws"
+            >
+              <div class="d-flex">
+                <div>Escribir</div>
+                <img src="assets/img/ws.png" />
+              </div>
+            </button>
+            <button
+              [disabled]="!medico.estaAtendiendo"
+              (click)="llamar(medico.celular)"
+              class="btn-llamar"
+            >
+              <div class="d-flex">
+                <div>Llamar</div>
+                <i-feather name="phone"></i-feather>
+              </div>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-container>
