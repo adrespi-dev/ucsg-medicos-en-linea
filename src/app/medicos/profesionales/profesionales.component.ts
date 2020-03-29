@@ -60,7 +60,8 @@ export class ProfesionalesComponent implements OnInit, OnChanges {
   }
 
   escribirEnWS(celular: string) {
-    const url = `whatsapp://send?abid=${celular}`;
+    const formattedPhone = "593" + celular.substring(1, celular.length);
+    const url = `whatsapp://send?phone=${formattedPhone}&text=hola`;
     window.open(url, "_self");
   }
 
