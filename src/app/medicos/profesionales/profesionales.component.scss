@@ -112,3 +112,19 @@ i-feather {
   width: 18px;
   margin-left: 6px;
 }
+
+.back {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 6px 0px;
+  width: fit-content;
+  color: #ff3c7e;
+  // color: white;
+  border-radius: 22px;
+
+  i-feather {
+    margin-left: 0px;
+    margin-right: 8px;
+  }
+}

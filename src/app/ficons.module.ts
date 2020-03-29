@@ -1,9 +1,11 @@
 import { FeatherModule } from "angular-feather";
 import { NgModule } from "@angular/core";
-import { Phone } from "angular-feather/icons";
+import { Phone, Heart, ArrowLeft } from "angular-feather/icons";
 
 const icons = {
-  Phone
+  Phone,
+  Heart,
+  ArrowLeft
 };
 
 @NgModule({

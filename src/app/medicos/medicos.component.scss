@@ -8,3 +8,31 @@
 .wrapper {
   overflow: auto;
 }
+
+.footer-space {
+  height: 120px;
+}
+
+.container {
+  min-height: calc(100% - 42px);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  min-height: 42px;
+  border-top: 1px solid #e6ecf5;
+  // margin-top: 25px;
+  // position: fixed;
+  // bottom: 0;
+  // left: 0;
+  // right: 0;
+  // z-index: 999;
+  background: white;
+
+  i-feather {
+    margin: 0 6px;
+  }
+}
