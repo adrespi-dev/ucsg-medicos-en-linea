@@ -7,11 +7,6 @@ import {
 } from "@angular/core";
 import { AreaSalud, Medico } from "../models";
 
-interface MedicoExtend extends Medico {
-  estaAtendiendo: boolean;
-  horariosStr: string[];
-}
-
 @Component({
   selector: "ucsg-profesionales",
   templateUrl: "./profesionales.component.html",
@@ -19,7 +14,7 @@ interface MedicoExtend extends Medico {
 })
 export class ProfesionalesComponent implements OnInit, OnChanges {
   @Input() area: AreaSalud;
-  medicos: MedicoExtend[];
+  medicos: Medico[];
 
   constructor() {}
 
@@ -30,29 +25,7 @@ export class ProfesionalesComponent implements OnInit, OnChanges {
   }
 
   populateMedicos() {
-    const now = new Date();
-    const ectHour = now.getUTCHours() - 5;
-    this.medicos = this.area.medicos.map(m => {
-      const horarioEncontrado = m.horarios.find(
-        h => ectHour >= h.start && ectHour <= h.end
-      );
-      const estaAtendiendo = horarioEncontrado != null;
-      const horariosStr = m.horarios.map(h => {
-        const minutes = h.esMediaHora ? "30" : "00";
-        const hoursStart = h.start < 10 ? `0${h.start}` : h.start.toString();
-        const start = `${hoursStart}:${minutes}`;
-
-        const hoursEnd = h.end < 10 ? `0${h.end}` : h.end.toString();
-        const end = `${hoursEnd}:${minutes}`;
-
-        return `${start} - ${end}`;
-      });
-      return {
-        ...m,
-        estaAtendiendo: estaAtendiendo,
-        horariosStr: horariosStr
-      };
-    });
+    this.medicos = this.area.medicos;
   }
 
   ngOnInit(): void {

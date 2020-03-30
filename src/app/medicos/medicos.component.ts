@@ -21,9 +21,7 @@ export class MedicosComponent implements OnInit {
 
   ngOnInit() {
     setTimeout(() => {
-      this.areas = this.profesionalesService.areas.sort((a, b) =>
-        a.name.localeCompare(b.name)
-      );
+      this.areas = this.profesionalesService.getAreasSalud();
 
       this.activatedRoute.queryParams.subscribe(params => {
         if (params.areaId) {

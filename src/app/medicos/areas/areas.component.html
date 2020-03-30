@@ -30,6 +30,12 @@
         <div class="area-name">
           {{ area.name }}
         </div>
+        <span
+          class="area-atendiendo"
+          [class.disabled]="area.medicosAtendiendo == 0"
+        >
+          {{ area.medicosAtendiendo }} atendiendo
+        </span>
       </div>
     </div>
   </div>

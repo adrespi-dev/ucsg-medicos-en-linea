@@ -62,3 +62,20 @@
     margin: 0;
   }
 }
+
+.area-name {
+  margin-bottom: 8px;
+}
+
+.area-atendiendo {
+  padding: 2px 15px;
+  background: #d41864;
+  border-radius: 22px;
+  border: 1px solid #e6ecf5;
+  color: #ffffff;
+
+  &.disabled {
+    background: #ececec;
+    color: #9a9a9a;
+  }
+}
