@@ -14,7 +14,7 @@ export class ProfesionalesService {
     return areas
       .map(area => {
         const medicos = area.medicos
-          .sort((a, b) => a.horarios[0].start - b.horarios[0].end)
+          .sort((a, b) => a.horarios[0].start - b.horarios[0].start)
           .map(m => this.mapMedico(m));
         return {
           slug: area.slug,
