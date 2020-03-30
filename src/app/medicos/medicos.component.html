@@ -1,25 +1,41 @@
-<ucsg-header></ucsg-header>
-<div class="body-app relative">
-  <div class="loading-overlay" *ngIf="isLoading">
-    <mat-progress-bar class="loading-bar" color="primary" mode="indeterminate">
-    </mat-progress-bar>
-  </div>
-  <div class="wrapper h-100 w-100">
-    <div class="container w-100">
-      <mat-tab-group [selectedIndex]="selectedIndex">
-        <mat-tab>
-          <ucsg-areas
-            [areas]="areas"
-            (areaSelected)="onAreaSelected($event)"
-          ></ucsg-areas>
-        </mat-tab>
-        <mat-tab>
-          <ucsg-profesionales [area]="areaSelected"></ucsg-profesionales>
-        </mat-tab>
-      </mat-tab-group>
+<div class="app-container">
+  <ucsg-header></ucsg-header>
+  <div class="body-app relative">
+    <div class="loading-overlay" *ngIf="isLoading">
+      <mat-progress-bar
+        class="loading-bar"
+        color="primary"
+        mode="indeterminate"
+      >
+      </mat-progress-bar>
     </div>
-    <div class="footer">
-      Desarrallado con <i-feather name="heart"></i-feather> por Adrián Espinoza
+    <div class="full-absolute">
+      <div class="wrapper relative h-100 w-100">
+        <div class="container w-100">
+          <mat-tab-group
+            disablePagination="true"
+            headerPosition="below"
+            [selectedIndex]="selectedIndex"
+            (selectedTabChange)="selectedTabChange($event)"
+            style="min-height:100%"
+            dynamicHeight="true"
+          >
+            <mat-tab disabled="true">
+              <ucsg-areas
+                [areas]="areas"
+                (areaSelected)="onAreaSelected($event)"
+              ></ucsg-areas>
+            </mat-tab>
+            <mat-tab disabled="true">
+              <ucsg-profesionales [area]="areaSelected"></ucsg-profesionales>
+            </mat-tab>
+          </mat-tab-group>
+        </div>
+        <div class="footer">
+          Desarrallado con <i-feather name="heart"></i-feather> por Adrián
+          Espinoza
+        </div>
+      </div>
     </div>
   </div>
 </div>

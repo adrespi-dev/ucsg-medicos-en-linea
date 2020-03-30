@@ -37,6 +37,7 @@ $uscg-covid19-theme: mat-light-theme(
 @import "../node_modules/bootstrap/scss/mixins";
 
 // Optional
+@import "../node_modules/bootstrap/scss/reboot";
 @import "../node_modules/bootstrap/scss/grid";
 
 @import "styles/tabs";
@@ -54,7 +55,8 @@ body {
   font-weight: 500;
 
   position: fixed;
-  overflow: hidden;
+  overflow: hidden !important;
+  height: 100%;
 }
 
 * {
@@ -76,6 +78,14 @@ body {
 
 .relative {
   position: relative;
+}
+
+.full-absolute {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
 .loading-overlay {

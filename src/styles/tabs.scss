@@ -1,7 +1,11 @@
 body .mat-tab-labels {
-  display: none;
+  // display: none;
 }
 
 body .mat-tab-header {
-  display: none;
+  opacity: 0 !important;
 }
+
+// body .mat-tab-header-pagination.mat-tab-header-pagination-disabled {
+//   display: none !important;
+// }

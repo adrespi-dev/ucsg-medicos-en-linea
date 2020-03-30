@@ -1,8 +1,14 @@
-.body-app {
-  height: calc(100vh - 64px);
-  margin-top: 64px;
+.app-container {
+  height: 100%;
   width: 100%;
-  background: #f6f7fb;
+  display: flex;
+  flex-direction: column;
+}
+
+.body-app {
+  width: 100vw;
+  overflow: hidden;
+  flex: 1 0 auto;
 }
 
 .wrapper {
@@ -14,7 +20,8 @@
 }
 
 .container {
-  min-height: calc(100% - 42px);
+  min-height: calc(100vh - 42px);
+  // min-height: calc(100%);
 }
 
 .footer {

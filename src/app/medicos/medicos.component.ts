@@ -38,6 +38,13 @@ export class MedicosComponent implements OnInit {
     }, 1000);
   }
 
+  selectedTabChange(e) {
+    if (this.selectedIndex == 1) {
+      const myDiv = document.querySelector(".wrapper");
+      myDiv.scrollTop = 0;
+    }
+  }
+
   onAreaSelected(area: AreaSalud) {
     this.isLoading = true;
     setTimeout(() => {
