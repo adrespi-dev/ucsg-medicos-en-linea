@@ -7,7 +7,7 @@ export const areas: AreaSalud[] = [
     icon: "heart",
     medicos: [
       {
-        horarios: [{ start: 14, end: 16 }],
+        horarios: [{ start: 14, end: 23 }],
       },
       {
         horarios: [{ start: 14, end: 16 }],
@@ -20,7 +20,7 @@ export const areas: AreaSalud[] = [
     icon: "pain",
     medicos: [
       {
-        horarios: [{ start: 10, end: 12 }],
+        horarios: [{ start: 10, end: 23 }],
       },
     ],
   },
@@ -30,24 +30,24 @@ export const areas: AreaSalud[] = [
     icon: "scalpel",
     medicos: [
       {
-        horarios: [{ start: 10, end: 12 }],
+        horarios: [{ start: 10, end: 23 }],
       },
       {
-        horarios: [{ start: 10, end: 12 }],
-      },
-      {
-        horarios: [{ start: 14, end: 16 }],
+        horarios: [{ start: 10, end: 23 }],
       },
       {
         horarios: [{ start: 14, end: 16 }],
       },
       {
         horarios: [{ start: 14, end: 16 }],
+      },
+      {
+        horarios: [{ start: 14, end: 23 }],
       },
       {
         horarios: [
           { start: 10, end: 12 },
-          { start: 14, end: 16 },
+          { start: 14, end: 23 },
         ],
       },
     ],
@@ -464,7 +464,7 @@ export const areas: AreaSalud[] = [
     icon: "brain",
     medicos: [
       {
-        horarios: [{ start: 16, end: 18 }],
+        horarios: [{ start: 16, end: 23 }],
       },
       {
         horarios: [{ start: 17, end: 19 }],
@@ -473,7 +473,7 @@ export const areas: AreaSalud[] = [
         horarios: [{ start: 15, end: 18 }],
       },
       {
-        horarios: [{ start: 16, end: 18 }],
+        horarios: [{ start: 16, end: 23 }],
       },
       {
         horarios: [{ start: 12, end: 20 }],
@@ -482,7 +482,7 @@ export const areas: AreaSalud[] = [
         horarios: [{ start: 10, end: 12 }],
       },
       {
-        horarios: [{ start: 16, end: 18 }],
+        horarios: [{ start: 16, end: 23 }],
       },
     ],
   },
