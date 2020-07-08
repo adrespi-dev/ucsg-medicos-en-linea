@@ -27,8 +27,12 @@
             {{ medico.estaAtendiendo ? "Atendiendo" : "No Atendiendo" }}
           </div>
           <div class="medico-profile">
-            <div class="medico-name">{{ medico.name }}</div>
-            <div class="medico-phone">{{ medico.celular }}</div>
+            <div class="medico-name">
+              {{ medico.name || "Adrián Espinoza " }}
+            </div>
+            <div class="medico-phone">
+              {{ medico.celular || "+593 912345678" }}
+            </div>
             <div class="medico-horario">Horario:</div>
             <div
               class="medico-horario-item"

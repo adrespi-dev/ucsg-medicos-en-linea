@@ -13,8 +13,6 @@ export interface Horario {
 }
 
 export interface Medico {
-  name: string;
-  celular: string;
   horarios: Horario[];
   estaAtendiendo?: boolean;
   horariosStr?: string[];

@@ -23,6 +23,8 @@
   font-weight: 600;
   color: #60618a;
   background: white;
+  border: 3px solid transparent;
+  border-radius: 8px;
 
   .area-icon {
     height: 42px;
@@ -33,13 +35,20 @@
   }
 
   &:hover {
-    color: white;
-    background: #d41864;
+    // color: white;
+    // background: #d41864;
+    border: 3px solid #d41864;
+    background: #ffffff;
 
     .area-icon {
       height: 42px;
       width: 42px;
       fill: #ffffff;
+      fill: #d41864;
+    }
+
+    .area-name {
+      color: #d41864;
     }
   }
 }
